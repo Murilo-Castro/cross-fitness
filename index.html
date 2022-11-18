@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cross Fitness</title>
+    <link rel="icon" href="./assets/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="titulo">Academias Cross Fitness</h1>
+        <img src="./assets/icon.png" alt="Logo" />
+      </div>
+    </header>
+    <main>
+      <section class="container">
+        <h2>Meus Alunos</h2>
+        <label class="filtro" for="filtro">Pesquise aqui:</label>
+        <input
+          id="filtrar-aluno"
+          placeholder="digite aqui o nome do paciênte."
+        />
+        <h3>Para deletar um aluno click duas vezes no aluno.</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Peso(kg)</th>
+              <th>Altura(m)</th>
+              <th>Idade</th>
+              <th>Sexo</th>
+              <th>Peso Ideal?</th>
+              <th id="imc-value">IMC</th>
+              <th>Kcal</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-alunos"></tbody>
+        </table>
+
+        <span id="erro-requisicao" class="invisivel"
+          >Erro na requisição dos alunos!</span
+        >
+      </section>
+      <section class="container">
+        <h2 id="titulo-form">Adicionar novo aluno</h2>
+        <ul id="mensagens-erro"></ul>
+        <form id="form-adiciona">
+          <div class="grupo">
+            <label for="nome">Nome:</label>
+            <input
+              id="nome"
+              name="nome"
+              type="text"
+              placeholder="digite o nome do seu aluno"
+              class="campo"
+            />
+          </div>
+          <div class="grupo">
+            <label for="peso">Peso:</label>
+            <input
+              id="peso"
+              name="peso"
+              type="text"
+              placeholder="digite o peso do seu aluno"
+              class="campo campo-medio"
+            />
+          </div>
+          <div class="grupo">
+            <label for="altura">Altura (Em Centimetros):</label>
+            <input
+              id="altura"
+              name="altura"
+              type="text"
+              placeholder="digite a altura do seu aluno (em cm)"
+              class="campo campo-medio"
+            />
+          </div>
+          <div class="grupo">
+            <label for="idade">Idade:</label>
+            <input
+              id="idade"
+              type="text"
+              placeholder="digite a idade do aluno"
+              class="campo campo-medio"
+            />
+          </div>
+          <div class="grupo">
+            <label for="gordura">Sexo:</label>
+            <select class="grupo" name="sexo" id="sexo">
+              <option value="">Escolha o Sexo:</option>
+              <option value="Masculino">Masculino</option>
+              <option value="Feminino">Feminino</option>
+            </select>
+          </div>
+  
+          <button id="adicionar-aluno" class="botao bto-principal">
+            Adicionar
+          </button>
+        </form>
+      </section>
+      <a
+      href="https://api.whatsapp.com/send?l=pt&amp;phone=55071991619877"
+      ><img
+        id="suporte"
+        src="./assets/suporte.png"
+        data-selector="img"
+    /></a>
+    <P id="suporte-legend">FALE COM O <br> SUPORTE:</P>
+    </main>
+    <footer>
+      <p class="copyright">&copy; Academias Cross Fitness</p>
+    </footer>
+    <script src="js/calcula_imc.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/remove_aluno.js"></script>
+    <script src="js/filtrar_aluno.js"></script>
+    <script src="js/calcula_kcal.js"></script>
+    <script src="js/peso_ideal.js"></script>
+  </body>
+</html>

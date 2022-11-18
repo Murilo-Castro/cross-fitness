@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+header {
+  background-color: #333;
+  height: 5em;
+  color: #fff;
+  margin-bottom: 1em;
+}
+
+header img {
+  display: flex;
+  float: right;
+  margin-top: 0.5em;
+  width: 70px;
+}
+
+header h1 {
+  font-size: 2em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+header h2 {
+  font-size: 2em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+h3 {
+  margin-top: 0.5em;
+  color: #555;
+  font-size: 1.2em;
+}
+
+header .container:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.container {
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+section {
+  margin: 2em 0;
+  overflow: hidden;
+}
+
+section h2 {
+  font-size: 3em;
+  display: block;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 0.5em;
+}
+
+#filtrar-aluno {
+  padding: 10px;
+  width: 40%;
+}
+
+table {
+  width: 100%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  table-layout: fixed;
+}
+
+td,
+th {
+  padding: 0.7em;
+  margin: 0;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+th {
+  font-weight: bold;
+  background-color: #eee;
+}
+
+label {
+  color: #555;
+  display: block;
+  margin-bottom: 0.2em;
+}
+
+.campo {
+  margin: 0;
+  padding-bottom: 1em;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 0.7em;
+  width: 100%;
+}
+
+.campo-medio {
+  display: inline-block;
+  padding-right: 0.5em;
+}
+
+.grupo {
+  width: 32%;
+  display: inline-block;
+  padding: 10px 0px;
+}
+
+.grupo select {
+  width: 50%;
+}
+
+button {
+  padding: 0.5em 2em;
+  border: 0;
+  border-bottom: 3px solid;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin: 0;
+  margin-top: -3px;
+  color: #fff;
+  background-color: #0c8cd3;
+  border-color: #04324c;
+  width: 20%;
+  display: block;
+  clear: both;
+  margin: 10px 0px;
+}
+
+button:active {
+  margin-top: 0px;
+  border: 0;
+}
+
+button[disabled="disabled"],
+button:disabled {
+  background-color: gray;
+  border-color: darkgray;
+}
+
+#mensagens-erro {
+  color: red;
+}
+
+.adicionar-paciente {
+  margin-top: 30px;
+}
+
+.campo-invalido {
+  border: 1px solid red;
+}
+
+.paciente-invalido {
+  background-color: lightcoral;
+}
+
+.remove-efect {
+  opacity: 0;
+  transition: 1s;
+}
+
+.filtro {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.invisivel {
+  display: none;
+}
+
+#suporte {
+  height: 64px;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  z-index: 99999;  
+}
+
+#suporte-legend {
+  position: fixed;
+  bottom: 60px;
+  right: 13px;
+  z-index: 99999;
+  text-align: center;
+  font-weight: bold;
+  color: #00FF05;
+}
+
+footer {
+  margin-top: auto;
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+}
